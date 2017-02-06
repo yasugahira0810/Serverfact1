@@ -1,0 +1,2 @@
+[test-server]
+192.168.225.22:32771 ansible_ssh_pass=screencast ansible_ssh_user=root

@@ -13,6 +13,13 @@ RUN localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 # Install packages
 RUN yum install -y ruby vim ctags git iproute which
 
-# Install ansible
+# Install Ansible
 RUN yum install -y epel-release
 RUN yum install -y ansible
+
+# Install Serverspec
+RUN gem install rake serverspec
+
+WORKDIR /serverfact
+
+ADD hosts /serverfact
