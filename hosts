@@ -1,0 +1,9 @@
+#[centos6_ssh]
+#192.168.225.22:32776
+
+[centos7_ssh]
+192.168.225.22:32777
+
+[all:vars]
+ansible_ssh_pass=password
+ansible_ssh_user=root

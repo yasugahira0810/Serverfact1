@@ -5,6 +5,8 @@
 - Distribute original facts
 - Gather facts and store it to before/{hostname} directory
 
+		ansible centos7_ssh -i hosts -m setup | sed '1c\{' > spec/localhost/before/centos7_ssh.json
+
 ## Gathering after server state by Ansible
 
 - Gather facts and store it to after/{hostname} directory

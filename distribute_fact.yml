@@ -1,0 +1,8 @@
+---
+- hosts: centos7_ssh
+  user: root
+  tasks:
+  - name: aaa
+    file: path=/etc/ansible/facts.d state=directory owner=root group=root mode=0755 
+  - name: bbb
+    copy: src=original_fact/service_enabled.fact dest=/etc/ansible/facts.d/service_enabled.fact owner=root group=root mode=0744
