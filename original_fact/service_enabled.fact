@@ -8,6 +8,8 @@ SERVICES=(`systemctl list-unit-files --no-legend`)
 LAST_SERVICE=${SERVICES[((${#SERVICES[@]}-1))]}
 unset SERVICES[$((${#SERVICES[@]}-1))]
 
+IFS=$orig_ifs
+
 echo "{"
 
 for service in "${SERVICES[@]}"
