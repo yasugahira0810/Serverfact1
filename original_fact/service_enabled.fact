@@ -4,7 +4,7 @@
 orig_ifs=$IFS
 IFS=$'\n'
 
-SERVICES=(`systemctl list-unit-files --no-legend`)
+SERVICES=(`systemctl list-unit-files --type service --no-legend`)
 LAST_SERVICE=${SERVICES[((${#SERVICES[@]}-1))]}
 unset SERVICES[$((${#SERVICES[@]}-1))]
 
