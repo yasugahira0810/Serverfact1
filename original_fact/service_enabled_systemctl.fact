@@ -27,4 +27,3 @@ STATE=$2
 echo "  \"$UNIT_FILE\": \"$STATE\""
 
 echo "}"
-

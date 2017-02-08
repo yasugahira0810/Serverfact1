@@ -85,3 +85,4 @@ centos6_sshに実行してしまう。仕方ないので、コメントアウト
 - [\[Shell\] bash: コマンドの実行結果を配列や変数に代入する](https://www.d-wood.com/blog/2014/09/23_6869.html)
 - [bashの配列変数に関するTips](http://d.hatena.ne.jp/y-kawaz/20100720/1279607344)
 - [json出力する際に、キーの名前も一緒に表示したい](https://teratail.com/questions/51006)
+- [bashのシェルスクリプトの記述に関してメモ等](http://qiita.com/dskshmz/items/c01f29f8398cc7f5c396)

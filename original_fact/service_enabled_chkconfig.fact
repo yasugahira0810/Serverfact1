@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Chane IFS Setting to read 1 line as 1 value
+orig_ifs=$IFS
+IFS=$'\n'
+
+SERVICES=(`chkconfig --list`)
+LAST_SERVICE=${SERVICES[((${#SERVICES[@]}-1))]}
+unset SERVICES[$((${#SERVICES[@]}-1))]
+
+IFS=$orig_ifs
+
+echo "{"
+
+for service in "${SERVICES[@]}"
+do
+  set -- $service
+  NAME=$1
+  LEVELS=${@:2:7} 
+  echo "  \"$NAME\": \"$LEVELS\","
+done
+
+set -- $LAST_SERVICE
+NAME=$1
+LEVELS=${@:2:7} 
+
+echo "  \"$NAME\": \"$LEVELS\""
+
+echo "}"
